@@ -1,0 +1,1 @@
+{"data":[{"id":"apr_0Zk3Qw9LpTnB","status":"approved","collection":"conformance_kv","operation":"update","makerId":"usr_conformance0001","proposedPayload":{"val":"older"},"targetRecordId":"rec_1","approverId":"usr_conformance0002","decidedAt":"2026-10-25T09:00:00.000Z","decisionReason":null,"createdAt":"2026-10-25T08:00:00.000Z","expiresAt":null}],"meta":{"cursor":{"next":null}}}

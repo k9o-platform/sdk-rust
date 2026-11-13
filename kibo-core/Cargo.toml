@@ -1,0 +1,28 @@
+[package]
+name = "k9o-kibo-core"
+version = "1.5.0"
+edition = "2021"
+rust-version = "1.78"
+description = "The Kibo core adapter for the k9o Rust SDK: implements AppCore over kibo-kms-rest-ffi so KiboClientCore works with the real core."
+license = "Apache-2.0"
+repository = "https://github.com/k9o-platform/sdk-rust"
+publish = false
+
+# This is a separate crate on purpose. The `k9o` crate does not depend on the Kibo core, so a
+# build of `k9o` (default features or otherwise) never resolves or compiles it. Use this crate
+# only when you want the ready adapter.
+#
+# `kibo-kms-rest-ffi` 0.4.4 (Kibo core 2.16.4) is the first release on crates.io that builds as a
+# Rust library, so this crate builds from the registry with no patch. 0.4.5 (Kibo core 2.16.5) is the
+# first whose Windows library exports the core's functions, so this crate asks for 0.4.5 or later.
+[dependencies]
+k9o = { version = "1.5.0", path = ".." }
+kibo-kms-rest-ffi = { version = "0.4.5", default-features = false, features = ["kms-aws", "kms-gcp", "kms-azure", "kms-vault"] }
+async-trait = "0.1"
+
+[dev-dependencies]
+tokio = { version = "1.40", features = ["full"] }
+
+# Not part of the `k9o` crate's workspace: a build here has its own lock file and target directory.
+[workspace]
+

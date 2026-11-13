@@ -1,0 +1,1 @@
+{ "code": "K9O_INVALID_VECTOR_DIMENSION", "message": "query vector dimension does not match collection '_vec_example'", "context": { "collection": "_vec_example", "queryDim": 2 }, "recommendation": null }

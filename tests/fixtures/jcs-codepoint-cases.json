@@ -1,0 +1,164 @@
+{
+ "cases": [
+  {
+   "name": "null",
+   "input": null,
+   "expectCanonical": "null"
+  },
+  {
+   "name": "true",
+   "input": true,
+   "expectCanonical": "true"
+  },
+  {
+   "name": "false",
+   "input": false,
+   "expectCanonical": "false"
+  },
+  {
+   "name": "int_zero",
+   "input": 0,
+   "expectCanonical": "0"
+  },
+  {
+   "name": "int_pos",
+   "input": 42,
+   "expectCanonical": "42"
+  },
+  {
+   "name": "int_neg",
+   "input": -7,
+   "expectCanonical": "-7"
+  },
+  {
+   "name": "string_plain",
+   "input": "hello",
+   "expectCanonical": "\"hello\""
+  },
+  {
+   "name": "keys_sorted",
+   "input": {
+    "toMode": "BYOK",
+    "fromMode": "PLATFORM_MANAGED"
+   },
+   "expectCanonical": "{\"fromMode\":\"PLATFORM_MANAGED\",\"toMode\":\"BYOK\"}"
+  },
+  {
+   "name": "key_order_independent_a",
+   "input": {
+    "a": 1,
+    "b": 2,
+    "c": 3
+   },
+   "expectCanonical": "{\"a\":1,\"b\":2,\"c\":3}"
+  },
+  {
+   "name": "key_order_independent_b",
+   "input": {
+    "c": 3,
+    "a": 1,
+    "b": 2
+   },
+   "expectCanonical": "{\"a\":1,\"b\":2,\"c\":3}"
+  },
+  {
+   "name": "nested_and_array_order",
+   "input": {
+    "list": [
+     3,
+     1,
+     2
+    ],
+    "inner": {
+     "z": 1,
+     "a": 2
+    }
+   },
+   "expectCanonical": "{\"inner\":{\"a\":2,\"z\":1},\"list\":[3,1,2]}"
+  },
+  {
+   "name": "astral_key_order",
+   "input": {
+    "😀": 1,
+    "ﬀ": 2
+   },
+   "expectCanonical": "{\"ﬀ\":2,\"😀\":1}"
+  },
+  {
+   "name": "escape_quote_backslash",
+   "input": "a\"b\\c",
+   "expectCanonical": "\"a\\\"b\\\\c\""
+  },
+  {
+   "name": "escape_short_controls",
+   "input": "tab\tnl\ncr\rbell\bff\f",
+   "expectCanonical": "\"tab\\tnl\\ncr\\rbell\\bff\\f\""
+  },
+  {
+   "name": "escape_c0_0x01",
+   "input": "\u0001",
+   "expectCanonical": "\"\\u0001\""
+  },
+  {
+   "name": "escape_c0_0x0b_not_short",
+   "input": "\u000b",
+   "expectCanonical": "\"\\u000b\""
+  },
+  {
+   "name": "literal_non_ascii",
+   "input": "café-ünïcode",
+   "expectCanonical": "\"café-ünïcode\""
+  },
+  {
+   "name": "slash_unescaped",
+   "input": "a/b",
+   "expectCanonical": "\"a/b\""
+  },
+  {
+   "name": "u2028_u2029_literal",
+   "input": "  ",
+   "expectCanonical": "\"  \""
+  },
+  {
+   "name": "int_max_safe",
+   "input": 9007199254740991,
+   "expectCanonical": "9007199254740991"
+  },
+  {
+   "name": "int_neg_max_safe",
+   "input": -9007199254740991,
+   "expectCanonical": "-9007199254740991"
+  },
+  {
+   "name": "num_2p53_ceiling",
+   "input": 9007199254740992,
+   "expectError": "numeric_ceiling_exceeded"
+  },
+  {
+   "name": "num_neg_2p53_ceiling",
+   "input": -9007199254740992,
+   "expectError": "numeric_ceiling_exceeded"
+  },
+  {
+   "name": "num_fractional",
+   "input": 1.5,
+   "expectError": "non_integer_number"
+  },
+  {
+   "name": "diff_shape_object_keyed",
+   "input": {
+    "changes": {
+     "/address/city": {
+      "old": "A",
+      "new": "B"
+     },
+     "email": {
+      "old": null,
+      "new": "x@y"
+     }
+    }
+   },
+   "expectCanonical": "{\"changes\":{\"/address/city\":{\"new\":\"B\",\"old\":\"A\"},\"email\":{\"new\":\"x@y\",\"old\":null}}}"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+  "data": [
+    {
+      "id": "phi-3-mini",
+      "provider": "self_hosted",
+      "providerClass": "platform",
+      "modality": "text_completion",
+      "minTier": "BASE_CAMP",
+      "invocable": true,
+      "priceIn": 0.18,
+      "priceOut": 0.18,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "mistral-7b",
+      "provider": "self_hosted",
+      "providerClass": "platform",
+      "modality": "text_completion",
+      "minTier": "BASE_CAMP",
+      "invocable": true,
+      "priceIn": 0.18,
+      "priceOut": 0.18,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "mistral-8x7b",
+      "provider": "self_hosted",
+      "providerClass": "platform",
+      "modality": "text_completion",
+      "minTier": "ASCENT",
+      "invocable": true,
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "llama-3-8b",
+      "provider": "self_hosted",
+      "providerClass": "platform",
+      "modality": "text_completion",
+      "minTier": "BASE_CAMP",
+      "invocable": true,
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "llama-3-70b",
+      "provider": "self_hosted",
+      "providerClass": "platform",
+      "modality": "text_completion",
+      "minTier": "ASCENT",
+      "invocable": true,
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "claude-3-5-sonnet",
+      "provider": "anthropic",
+      "providerClass": "tenant_key",
+      "modality": "text_completion_with_tools",
+      "minTier": "ASCENT",
+      "invocable": false,
+      "reason": "tenant_key_only",
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "gpt-4o",
+      "provider": "openai",
+      "providerClass": "tenant_key",
+      "modality": "text_completion_with_tools",
+      "minTier": "ASCENT",
+      "invocable": false,
+      "reason": "tenant_key_only",
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "gpt-4o-mini",
+      "provider": "openai",
+      "providerClass": "tenant_key",
+      "modality": "text_completion",
+      "minTier": "ASCENT",
+      "invocable": false,
+      "reason": "tenant_key_only",
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "text-embedding-3-small",
+      "provider": "openai",
+      "providerClass": "tenant_key",
+      "modality": "embeddings",
+      "minTier": "BASE_CAMP",
+      "invocable": false,
+      "reason": "tenant_key_only",
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    },
+    {
+      "id": "text-embedding-3-large",
+      "provider": "openai",
+      "providerClass": "tenant_key",
+      "modality": "embeddings",
+      "minTier": "ASCENT",
+      "invocable": false,
+      "reason": "tenant_key_only",
+      "priceIn": null,
+      "priceOut": null,
+      "priceUnit": "usd_per_million_tokens"
+    }
+  ],
+  "meta": {
+    "cost": {
+      "egress": {
+        "gb": 2.413e-06,
+        "zone": "intra-region"
+      }
+    },
+    "timing": {
+      "gatewayMs": 71.683,
+      "totalMs": 71.683
+    },
+    "context": {
+      "requestId": "req_UfT0CfiHOx2s",
+      "traceId": "req_gT1KxGHaRY7r",
+      "projectId": "proj_2usBGoRQdOWN"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "data": {
+    "results": [
+      { "id": "p1", "score": 1, "_source": { "handle": "probe", "chunkIndex": 0 }, "contentHash": null, "text": "x axis", "metadata": { "lang": "en" }, "model": null, "chunk": 0 },
+      { "id": "p2", "score": 0.8, "_source": { "handle": "probe", "chunkIndex": 1, "extra": true }, "contentHash": "h2", "text": null, "metadata": {}, "model": "m1", "chunk": 1 }
+    ],
+    "collection": "_vec_example"
+  },
+  "meta": {}
+}

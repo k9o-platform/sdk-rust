@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": "apr_5oLshD2MVT27",
+    "status": "pending_approval",
+    "collection": "conformance_kv",
+    "operation": "insert",
+    "makerId": "usr_conformance0001",
+    "proposedPayload": { "id": "contract2-probe-0001", "val": "contract2-probe" },
+    "targetRecordId": null
+  },
+  "meta": {"cost": {}, "timing": {"totalMs": 12.4}, "context": {"requestId": "req_fixture0001", "traceId": "req_fixture0001", "projectId": "proj_fixture0001"}, "approval": { "status": "pending_approval" } }
+}

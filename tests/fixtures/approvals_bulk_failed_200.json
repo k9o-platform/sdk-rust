@@ -1,0 +1,1 @@
+{"data":{"attestationId":"apr_Vf23zMoj7m0u","action":"approve","affectedCount":1,"affectedIds":["apr_A"],"failed":[{"id":"apr_B","code":"K9O_STATE_CONFLICT","reason":"Pending change 'apr_B' was decided concurrently"}],"reason":null},"meta":{"cursor":null}}
